@@ -8,20 +8,33 @@ import the manually (Project settings -> Project <project name> -> Interpreter)
 The application is a streamlit application, so you should probably define a new run target
 for the project. If the virtual environment and the required libraries have been imported correctly,
 go to 
-**Run** -> **Edit configurations** , then
-add a new python run target, and change the following values:
-**Script path** - this should point to streamlit executable, usually in
+
+>**Run** -> **Edit configurations** 
+
+then add a new python run target, and change the following values:
+
+>**Script path**
+> 
+This should point to streamlit executable, usually in found in either
 ><project dir>/venv/bin/streamlit
 
 or if you are on Windows,
 
 > <project dir>\venv\bin\streamlit.exe
- 
-
+                                         
 
 **Parameters** 
 >run "main.py"
 
+**Working directory**
+
+Working directory should point to the same directory where rest of the files are, namely
+the root directory of the Python project.
+
+Then all you need to do is to just Run... from the Run-menu, and your computer should open up a browser window
+and run the project automagically with some debug printing to see what is being printed.
+
+## Excel file stucture
 
 A sample Excel file can be found in the form of sample.xlsx . The assumptions for the Excel file format are
 * Each worksheet will be printed out to own spider chart with the name of the worksheet
